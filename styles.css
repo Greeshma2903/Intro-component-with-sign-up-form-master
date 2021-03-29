@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* GENERAL STYLES */
+:root {
+  /* primary colours */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+
+  /* font */
+  --ff-family: 'Poppins', sans-serif;
+  --ff-size: 1rem;
+  --ff-colour: #fff;
+  --ff-wt: 400;
+}
+
+/* CONTENT (MOBILE FIRST LAYOUT)*/
+
+*,
+::before,
+::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--ff-colour);
+    font-family: var(--ff-family);
+    font-size: var(--ff-size);
+    background-color:  var(--Red);
+    background-image: url("./images/bg-intro-mobile.png");
+    background-position: top left;
+    background-repeat: repeat;
+}
+
+@media screen and (min-width: 1000px){
+    body {
+        height: 100vh;
+        background-color:  var(--Red);
+        background-image: url("./images/bg-intro-desktop.png");
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+main{
+    padding: 10% 4%;
+    text-align: center;
+}
+
+header h1{
+    width: 80%;
+    line-height: 1.3;
+    margin: 0 auto;
+}
+
+header p{
+    line-height: 1.5;
+    margin: 2rem 3rem;
+}
+
+.trial-btn, .sign-up{
+    font-family: var(--ff-family);
+}
+
+.trial-btn, .user-sign-up{
+    border-radius: 5px;
+    box-shadow: 0px 5px hsl(0, 50%, 59%, 0.712);
+    width: 80%;
+}
+
+.trial-btn{
+    background-color: var(--Blue);
+    color: #fff;
+    padding: 1rem 5rem;
+    border: none;
+    margin: 1rem 0;
+}
+
+
+.user-sign-up{
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.user-sign-up > :nth-child(n){
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.user-sign-up input{
+    border: 1px solid var(--Grayish-Blue);
+    font-family: var(--ff-family);
+} 
+
+input:focus {
+    outline-color: var(--Red);
+}
+
+input.input-para {
+    font-size: 12px;
+    color: var(--Red);
+}
+
+input.claim-btn {
+    color: var(--ff-colour);
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--Green);
+    border: none;
+    box-shadow: 0px 5px rgb(1, 165, 1) ;
+}
+
+.agree-privacy {
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+}
+
+.agree-privacy span{
+    font-weight: 500;
+    color: var(--Red);
+}
+
+@media screen and (min-width: 1000px) {
+    main{
+        max-width: 1500px;
+        padding: 3% 8%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header {
+        flex: 1;
+        text-align: left;
+        align-self: center;
+    }
+
+    header h1{
+        margin: initial;
+    }
+    header p{
+        margin: 2rem 0;
+    }
+    .sign-up{
+        flex: 1;
+    }
+}
+
